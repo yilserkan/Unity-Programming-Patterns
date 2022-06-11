@@ -1,3 +1,3 @@
 # Unity-Programming-Patterns
 
-## 1.Command Pattern
+## 1. Command Pattern
