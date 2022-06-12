@@ -27,7 +27,7 @@ The command pattern is a command pattern which encapsulates all the information 
 
 ### How to implement
 1.  Create a abstract class named Command and add all relative information.
-2.  Create a new class which inherits from the command class and override the functions.
+2.  Create a new class which inherits from the command class and overrides the functions.
 3.  Create another class which will have a list of commands.
 4.  Add to this list the command which you want to execute.
 5.  Execute the command.
