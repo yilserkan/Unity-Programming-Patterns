@@ -51,7 +51,7 @@ The command pattern is a pattern which encapsulates all the information needed t
  
  ### How to implement
  - Create an abstract subject class which has a list of observers and add methods to register observers, unregister observers and notify observers.
- - Create an abstract observer class which an an abstract method which will be called when it is notified.
+ - Create an abstract observer class which has an abstract method which will be called when it is notified.
  - Create a class wich will inherit from the abstract subject class.This class will call the notify function after it has been triggered.
  - Create classes which wil implement the observer method and override the abstract method of the observer class which is basically the logic of what is going to be executed after it has been notified.
  
