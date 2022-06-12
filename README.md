@@ -14,7 +14,7 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 2. [Observer Pattern](#2-Observer-Pattern)
 
 ## 1. Command Pattern
-The command pattern is a command pattern which encapsulates all the information needed to perform an event or action. 
+The command pattern is a pattern which encapsulates all the information needed to perform an event or action. 
 
 ### When to use
  - If you want to implement undo, redo or replay operations.
