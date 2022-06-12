@@ -8,6 +8,8 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 ### Advantages of an Interface
 - 
 
+1. [Command](#1-Command-Pattern)
+
 # Patterns
 ## 1. Command Pattern
 The command pattern is a command pattern which encapsulates all the information needed to perform an event or action. 
@@ -31,4 +33,6 @@ The command pattern is a command pattern which encapsulates all the information 
 3.  Create another class which will have a list of commands.
 4.  Add to this list the command which you want to execute.
 5.  Execute the command.
+
+## 2. Observer Pattern
  
