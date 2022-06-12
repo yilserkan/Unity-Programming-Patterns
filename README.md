@@ -8,7 +8,7 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 ### Advantages of an Interface
 - 
 
-1. [Command](#1-Command-Pattern)
+1. [Command Pattern](#1-Command-Pattern)
 
 # Patterns
 ## 1. Command Pattern
