@@ -9,6 +9,7 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 - 
 
 1. [Command Pattern](#1-Command-Pattern)
+2. [Observer Pattern](#2-Observer-Pattern)
 
 # Patterns
 ## 1. Command Pattern
