@@ -35,6 +35,13 @@ public class Entity : MonoBehaviour, IEntity
             ScaleCommand scaleCommand = new ScaleCommand(this, scaleInput);
             _commandProcessor.ExecuteCommand(scaleCommand);
         }
+
+        int rotationInput = _inputReader.ReadRotationInput();
+        if (rotationInput != 0)
+        {
+            RotateCommand rotateCommand = new RotateCommand(this, rotationInput);
+            _commandProcessor.ExecuteCommand(rotateCommand);
+        }
     }
     
     public void MoveFromTo(Vector3 startPosition, Vector3 endPosition)

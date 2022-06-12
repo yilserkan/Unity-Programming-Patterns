@@ -46,4 +46,18 @@ public class InputReader : MonoBehaviour
 
         return 0;
     }
+
+    public int ReadRotationInput()
+    {
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            return -1;
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            return 1;
+        }
+
+        return 0;
+    }
 }
