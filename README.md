@@ -23,7 +23,7 @@ The command pattern is a pattern which encapsulates all the information needed t
 ### Advantages
 - You can implement redo or replay features as you have all information needed already stored.
 - It is easy to implement new commands without changing the existing code.
-- The class which invkes the command is decoupled from the class which knows the operation.
+- The class which invokes the command is decoupled from the class which knows the operation.
 
 ### Disadvantages
 - You have to allocate memory for every command.
