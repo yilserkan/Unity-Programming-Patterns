@@ -8,18 +8,11 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 ### Advantages of an Interface
 
 
-## Scriptable Objects
-Scriptable objects are data containers.  
-
-### Advantages of Scriptable Objects
-- They live in the project level so any changes you make in play mode is going to be saved.
-- Scene independent. Therefore it is a great way to use as a save system.
-- They can save memory and performance.
-
 # Patterns
 
 1. [Command Pattern](#1-Command-Pattern)
 2. [Observer Pattern](#2-Observer-Pattern)
+3. [Scriptable Object](#3-Scriptable-Object)
 
 ## 1. Command Pattern
 The command pattern is a pattern which encapsulates all the information needed to perform an event or action. 
@@ -65,4 +58,16 @@ The command pattern is a pattern which encapsulates all the information needed t
  
  
  ### Better way
- There is a much simpler way to make use of the observer pattern within Unity which is by using events. Events are  
+ There is a much simpler way to make use of the observer pattern within Unity which is by using events. There is a ready-made delegate event which is called Action. You can creat this event as static in a class and invoke it after it has been triggered. If there are any classes which are listening to this event they will be executed.
+ 
+## 3. Scriptable Object
+ Scriptable objects are data containers.
+ 
+ ### Advantages of Scriptable Objects
+- They live in the project level so any changes you make in play mode is going to be saved.
+- Scene independent. Therefore it is a great way to use as a save system.
+- They can save memory and performance.
+- Reduces coupling 
+
+## How to implement
+You need to create a class which derives from Scriptable Object. In this class you can define the information which you want to store in it. This class wil act as a template from which you can create assets. 
