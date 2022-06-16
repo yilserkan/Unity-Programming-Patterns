@@ -1,18 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InputManagerPersistent : SingletonPersistent<InputManagerPersistent>
+namespace ProgrammingPatterns.Patterns.Singleton.Scripts
 {
-    private void Update()
+    public class InputManagerPersistent : SingletonPersistent<InputManagerPersistent>
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        private void Update()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
-    }
 
-    public void Jump()
-    {
-        Debug.Log("Jumpping");
+        public void Jump()
+        {
+            Debug.Log("Jumpping");
+        }
     }
 }

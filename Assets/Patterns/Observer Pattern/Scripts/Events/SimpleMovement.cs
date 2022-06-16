@@ -1,19 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleMovement : MonoBehaviour
+namespace ProgrammingPatterns.Patterns.Observer_Pattern.Scripts.Events
 {
-    [SerializeField] private float speed = 2;
-    void Update()
+    public class SimpleMovement : MonoBehaviour
     {
-        if (Input.GetKey(KeyCode.A))
+        [SerializeField] private float speed = 2;
+        void Update()
         {
-            transform.position += Time.deltaTime * speed * Vector3.left;
-        }   
-        else if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += Time.deltaTime * speed * Vector3.right ;
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.position += Time.deltaTime * speed * Vector3.left;
+            }   
+            else if (Input.GetKey(KeyCode.D))
+            {
+                transform.position += Time.deltaTime * speed * Vector3.right ;
+            }
         }
     }
 }

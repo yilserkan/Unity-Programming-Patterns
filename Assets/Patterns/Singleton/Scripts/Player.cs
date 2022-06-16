@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace ProgrammingPatterns.Patterns.Singleton.Scripts
 {
-    void Update()
+    public class Player : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        void Update()
         {
-            InputManagerPersistent.Instance.Jump();
-        }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                InputManagerPersistent.Instance.Jump();
+            }
         
+        }
     }
 }

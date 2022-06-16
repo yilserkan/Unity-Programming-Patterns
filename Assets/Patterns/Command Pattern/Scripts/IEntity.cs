@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public interface IEntity 
+namespace ProgrammingPatterns.Patterns.Command_Pattern.Scripts
 {
-    Transform transform { get; }
-    void MoveFromTo(Vector3 startPosition, Vector3 endPosition);
+    public interface IEntity 
+    {
+        Transform transform { get; }
+        void MoveFromTo(Vector3 startPosition, Vector3 endPosition);
+    }
 }

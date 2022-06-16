@@ -1,29 +1,31 @@
-using System;
 using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+namespace ProgrammingPatterns.Patterns.Singleton.Scripts
 {
-    private static T _instance;
-
-    public static T Instance
+    public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        get
+        private static T _instance;
+
+        public static T Instance
         {
-            if (_instance == null)
+            get
             {
-                _instance = FindObjectOfType<T>();
+                if (_instance == null)
+                {
+                    _instance = FindObjectOfType<T>();
+                    return _instance;
+                }
+
                 return _instance;
             }
-
-            return _instance;
         }
-    }
 
-    private void OnDestroy()
-    {
-        if (_instance == this)
+        private void OnDestroy()
         {
-            _instance = null;
+            if (_instance == this)
+            {
+                _instance = null;
+            }
         }
     }
 }

@@ -1,12 +1,15 @@
-public abstract class Command
+namespace ProgrammingPatterns.Patterns.Command_Pattern.Scripts
 {
-    protected IEntity _entity;
-
-    public Command(IEntity entity)
+    public abstract class Command
     {
-        _entity = entity;
-    }
+        protected IEntity _entity;
 
-    public abstract void Execute();
-    public abstract void Undo();
+        public Command(IEntity entity)
+        {
+            _entity = entity;
+        }
+
+        public abstract void Execute();
+        public abstract void Undo();
+    }
 }

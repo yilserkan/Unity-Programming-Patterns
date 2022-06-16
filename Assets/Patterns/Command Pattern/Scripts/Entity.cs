@@ -1,51 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(InputReader))]
-[RequireComponent(typeof(CommandProcessor))]
-public class Entity : MonoBehaviour, IEntity
+namespace ProgrammingPatterns.Patterns.Command_Pattern.Scripts
 {
-    private InputReader _inputReader;
-    private CommandProcessor _commandProcessor;
-    void Awake()
+    [RequireComponent(typeof(InputReader))]
+    [RequireComponent(typeof(CommandProcessor))]
+    public class Entity : MonoBehaviour, IEntity
     {
-        _inputReader = GetComponent<InputReader>();
-        _commandProcessor = GetComponent<CommandProcessor>();
-    }
+        private InputReader _inputReader;
+        private CommandProcessor _commandProcessor;
+        void Awake()
+        {
+            _inputReader = GetComponent<InputReader>();
+            _commandProcessor = GetComponent<CommandProcessor>();
+        }
 
   
-    void Update()
-    {
-        Vector3 direction = _inputReader.ReadInput();
-        if (direction != Vector3.zero)
+        void Update()
         {
-            MoveCommand moveCommand = new MoveCommand(this, direction);
-            _commandProcessor.ExecuteCommand(moveCommand);
-        }
+            Vector3 direction = _inputReader.ReadInput();
+            if (direction != Vector3.zero)
+            {
+                MoveCommand moveCommand = new MoveCommand(this, direction);
+                _commandProcessor.ExecuteCommand(moveCommand);
+            }
 
-        if (_inputReader.ReadUndo())
-        {
-            _commandProcessor.UndoCommand();
-        }
+            if (_inputReader.ReadUndo())
+            {
+                _commandProcessor.UndoCommand();
+            }
 
-        int scaleInput = _inputReader.ReadScale();
-        if (scaleInput != 0)
-        {
-            ScaleCommand scaleCommand = new ScaleCommand(this, scaleInput);
-            _commandProcessor.ExecuteCommand(scaleCommand);
-        }
+            int scaleInput = _inputReader.ReadScale();
+            if (scaleInput != 0)
+            {
+                ScaleCommand scaleCommand = new ScaleCommand(this, scaleInput);
+                _commandProcessor.ExecuteCommand(scaleCommand);
+            }
 
-        int rotationInput = _inputReader.ReadRotationInput();
-        if (rotationInput != 0)
-        {
-            RotateCommand rotateCommand = new RotateCommand(this, rotationInput);
-            _commandProcessor.ExecuteCommand(rotateCommand);
+            int rotationInput = _inputReader.ReadRotationInput();
+            if (rotationInput != 0)
+            {
+                RotateCommand rotateCommand = new RotateCommand(this, rotationInput);
+                _commandProcessor.ExecuteCommand(rotateCommand);
+            }
         }
-    }
     
-    public void MoveFromTo(Vector3 startPosition, Vector3 endPosition)
-    {
-        throw new System.NotImplementedException();
+        public void MoveFromTo(Vector3 startPosition, Vector3 endPosition)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

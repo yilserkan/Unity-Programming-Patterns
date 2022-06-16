@@ -1,15 +1,16 @@
-using System;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InputManager : Singleton<InputManager>
+namespace ProgrammingPatterns.Patterns.Singleton.Scripts
 {
-    private void Update()
+    public class InputManager : Singleton<InputManager>
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        private void Update()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }

@@ -1,15 +1,18 @@
 using System;
 using UnityEngine;
 
-public class PointOfInterest : MonoBehaviour
+namespace ProgrammingPatterns.Patterns.Observer_Pattern.Scripts.Events
 {
-    public static event Action<string> OnPointOfInterestEntered;
-    
-    [SerializeField]
-    private string _poiName;
-
-    private void OnTriggerEnter(Collider other)
+    public class PointOfInterest : MonoBehaviour
     {
-        OnPointOfInterestEntered?.Invoke(_poiName);
+        public static event Action<string> OnPointOfInterestEntered;
+    
+        [SerializeField]
+        private string _poiName;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            OnPointOfInterestEntered?.Invoke(_poiName);
+        }
     }
 }

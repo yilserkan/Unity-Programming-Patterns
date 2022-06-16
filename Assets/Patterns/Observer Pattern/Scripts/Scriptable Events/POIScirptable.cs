@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class POIScirptable : MonoBehaviour
+namespace ProgrammingPatterns.Patterns.Observer_Pattern.Scripts.Scriptable_Events
 {
-    [SerializeField] private GameEvent OnPointOfInterestEntered;
-
-    private void OnTriggerEnter(Collider other)
+    public class POIScirptable : MonoBehaviour
     {
-        OnPointOfInterestEntered.Raise();
+        [SerializeField] private GameEvent OnPointOfInterestEntered;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            OnPointOfInterestEntered.Raise();
+        }
     }
 }

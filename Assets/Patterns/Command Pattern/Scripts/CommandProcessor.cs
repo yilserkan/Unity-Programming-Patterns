@@ -1,27 +1,29 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandProcessor : MonoBehaviour
+namespace ProgrammingPatterns.Patterns.Command_Pattern.Scripts
 {
-    private List<Command> _commands = new List<Command>();
-    private int currentCommandIndex;
+    public class CommandProcessor : MonoBehaviour
+    {
+        private List<Command> _commands = new List<Command>();
+        private int currentCommandIndex;
     
-    public void ExecuteCommand(Command command)
-    {
-        _commands.Add(command);
-        command.Execute();
-        currentCommandIndex = _commands.Count - 1;
-    }
-
-    public void UndoCommand()
-    {
-        if (_commands.Count < 1)
+        public void ExecuteCommand(Command command)
         {
-            return;
+            _commands.Add(command);
+            command.Execute();
+            currentCommandIndex = _commands.Count - 1;
         }
-        _commands[currentCommandIndex].Undo();
-        _commands.RemoveAt(currentCommandIndex);
-        currentCommandIndex--;
+
+        public void UndoCommand()
+        {
+            if (_commands.Count < 1)
+            {
+                return;
+            }
+            _commands[currentCommandIndex].Undo();
+            _commands.RemoveAt(currentCommandIndex);
+            currentCommandIndex--;
+        }
     }
 }
