@@ -13,6 +13,7 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 1. [Command Pattern](#1-Command-Pattern)
 2. [Observer Pattern](#2-Observer-Pattern)
 3. [Scriptable Object](#3-Scriptable-Object)
+4. [Singleton Pattern](#4-Singleton-Pattern)
 
 ## 1. Command Pattern
 The command pattern is a pattern which encapsulates all the information needed to perform an event or action. 
@@ -71,3 +72,14 @@ The command pattern is a pattern which encapsulates all the information needed t
 
 ## How to implement
 You need to create a class which derives from Scriptable Object. In this class you can define the information which you want to store in it. This class wil act as a template from which you can create assets. 
+
+## 4. Singleton Pattern
+An object which makes use of the singleton pattern can be accessed from everywhere and they can only be instansiated once.
+
+### Advantatages of the Singleton Pattern
+- Easy to implement
+- Can be accessed from everywhere
+
+### Disadvanatges of the Singleton Pattern
+- Encourages coupling
+- Can make testing more difficult
