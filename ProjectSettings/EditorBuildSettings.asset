@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Patterns/Command Pattern/Scene/CommandScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Patterns/Singleton/Scenes/SingletonScene 1.unity
+    guid: c85c893890f56b2418b824fb3dba6074
+  - enabled: 1
+    path: Assets/Patterns/Singleton/Scenes/SingletinScene 2.unity
+    guid: 4dbebf01ae6c3c140ac6987efd8849af
   m_configObjects: {}
