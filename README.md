@@ -6,7 +6,10 @@ Before i get into design patterns there a couple of fundamental topics which are
 An Interface is kind of a contract. It has set of methods, properties and other members that a target class must implement.
 
 ### Advantages of an Interface
+- Loose coupling
 
+## Disadvantages of an Interface
+- If you extend the interface you need to modify all classes which implement it.
 
 # Patterns
 
