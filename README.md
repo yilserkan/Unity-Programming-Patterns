@@ -6,7 +6,15 @@ Before i get into design patterns there a couple of fundamental topics which are
 An Interface is kind of a contract. It has set of methods, properties and other members that a target class must implement.
 
 ### Advantages of an Interface
-- 
+
+
+## Scriptable Objects
+Scriptable objects are data containers.  
+
+### Advantages of Scriptable Objects
+- They live in the project level so any changes you make in play mode is going to be saved.
+- Scene independent. Therefore it is a great way to use as a save system.
+- They can save memory and performance.
 
 # Patterns
 
