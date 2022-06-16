@@ -70,7 +70,7 @@ The command pattern is a pattern which encapsulates all the information needed t
 - They can save memory and performance.
 - Reduces coupling 
 
-## How to implement
+### How to implement
 You need to create a class which derives from Scriptable Object. In this class you can define the information which you want to store in it. This class wil act as a template from which you can create assets. 
 
 ## 4. Singleton Pattern
@@ -85,7 +85,7 @@ An object which makes use of the singleton pattern can be accessed from everywhe
 - Can make testing more difficult
 - Can get out of hand
 
-## How to implement
+### How to implement
 1. Create a private static instance variable.
 2. Define a public getter method for that instance. This method will set the instance variable if it is null and return the private instance. If it is already set it will return the private instance variable.
 3. If you want to make it persistent across scenes you need to call DontDestroyOnLoad on the awake method.
