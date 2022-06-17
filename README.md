@@ -17,6 +17,7 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 2. [Observer Pattern](#2-Observer-Pattern)
 3. [Scriptable Object](#3-Scriptable-Object)
 4. [Singleton Pattern](#4-Singleton-Pattern)
+5. [Object Pooling](#5-Object-Pooling)
 
 ## 1. Command Pattern
 The command pattern is a pattern which encapsulates all the information needed to perform an event or action. 
@@ -92,3 +93,5 @@ An object which makes use of the singleton pattern can be accessed from everywhe
 1. Create a private static instance variable.
 2. Define a public getter method for that instance. This method will set the instance variable if it is null and return the private instance. If it is already set it will return the private instance variable.
 3. If you want to make it persistent across scenes you need to call DontDestroyOnLoad on the awake method.
+
+## 5. Object Pooling
