@@ -95,3 +95,18 @@ An object which makes use of the singleton pattern can be accessed from everywhe
 3. If you want to make it persistent across scenes you need to call DontDestroyOnLoad on the awake method.
 
 ## 5. Object Pooling
+The object pooling design pattern is a container which holds objects. These objects can be used by activating the disabled objects when needed and deactivating the activated ones after they have completed their task. This comes in handy when you need to instansiate a lot of objects 
+
+### When to use
+This pattern is used whena class needs to be initialized often.
+
+### Advantages
+- Performance and memory boost.
+
+### Disadvantages
+-If the max size is not defiend properly it can leed to unnecessary memory usage.
+
+### How to implement
+1. Craete an ObjectPool with the desired class.
+2. Define the OnCreate, OnTakeFromPool, OnReturnedToPool functions.
+3. **Get** objects from the pool when needed and **Release** them when they are not needed anymore.
