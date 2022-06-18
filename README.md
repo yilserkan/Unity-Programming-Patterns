@@ -6,7 +6,10 @@ Before i get into design patterns there a couple of fundamental topics which are
 An Interface is kind of a contract. It has set of methods, properties and other members that a target class must implement.
 
 ### Advantages of an Interface
+- Loose coupling
 
+## Disadvantages of an Interface
+- If you extend the interface you need to modify all classes which implement it.
 
 # Patterns
 
@@ -14,6 +17,7 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 2. [Observer Pattern](#2-Observer-Pattern)
 3. [Scriptable Object](#3-Scriptable-Object)
 4. [Singleton Pattern](#4-Singleton-Pattern)
+5. [Object Pooling](#5-Object-Pooling)
 
 ## 1. Command Pattern
 The command pattern is a pattern which encapsulates all the information needed to perform an event or action. 
@@ -89,3 +93,20 @@ An object which makes use of the singleton pattern can be accessed from everywhe
 1. Create a private static instance variable.
 2. Define a public getter method for that instance. This method will set the instance variable if it is null and return the private instance. If it is already set it will return the private instance variable.
 3. If you want to make it persistent across scenes you need to call DontDestroyOnLoad on the awake method.
+
+## 5. Object Pooling
+The object pooling design pattern is a container which holds objects. These objects can be used by activating the disabled objects when needed and deactivating the activated ones after they have completed their task. This comes in handy when you need to instansiate a lot of objects 
+
+### When to use
+This pattern is used whena class needs to be initialized often.
+
+### Advantages
+- Performance and memory boost.
+
+### Disadvantages
+-If the max size is not defiend properly it can leed to unnecessary memory usage.
+
+### How to implement
+1. Craete an ObjectPool with the desired class.
+2. Define the OnCreate, OnTakeFromPool, OnReturnedToPool functions.
+3. **Get** objects from the pool when needed and **Release** them when they are not needed anymore.
