@@ -8,8 +8,19 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 ### Advantages of an Interface
 - Loose coupling
 
-## Disadvantages of an Interface
+### Disadvantages of an Interface
 - If you extend the interface you need to modify all classes which implement it.
+
+## Unit Testing
+Unit testing is a testing method where the individual units of the code are being tested to validate if they are performing their actions correctly.
+
+### Advantages of Unit Testing
+- If you refactor the code the unit tests will make sure that everything still works
+- The tests can be executed individuallly
+
+### Disadvantages of Unit Testing
+- It can't catch all errors.
+- It takes time to create the unit tests.
 
 # Patterns
 
