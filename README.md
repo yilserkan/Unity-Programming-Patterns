@@ -18,6 +18,7 @@ An Interface is kind of a contract. It has set of methods, properties and other 
 3. [Scriptable Object](#3-Scriptable-Object)
 4. [Singleton Pattern](#4-Singleton-Pattern)
 5. [Object Pooling](#5-Object-Pooling)
+6. [Humble Object](#6-Humble-Object)
 
 ## 1. Command Pattern
 The command pattern is a pattern which encapsulates all the information needed to perform an event or action. 
@@ -110,3 +111,18 @@ This pattern is used whena class needs to be initialized often.
 1. Craete an ObjectPool with the desired class.
 2. Define the OnCreate, OnTakeFromPool, OnReturnedToPool functions.
 3. **Get** objects from the pool when needed and **Release** them when they are not needed anymore.
+
+## 6. Humble Object
+Is a pattern where you seperate the logic from the framework code. The framework classes are becoming Humble by seperating all of the logical functions to another class so that is left with only the bare minimum required logic which doesn't need to be tested.
+
+### When to use
+- When an object is too difficult to test
+
+### Advantages
+- Easy testable structure
+
+### How to implement
+- Extract the logical functions of the framework to another clas s to another class.
+- Create an interface of the framework.
+- Create a mock version of the framework(If you don't use NSubstitute).
+- Create a test class which tests the functionality with the mock version.
