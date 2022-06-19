@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1890dfea08874b24fbba598adca7b938, type: 3}
   m_Name: Ball Life Time
   m_EditorClassIdentifier: 
-  ballLifeTimeAfterCollision: 0
+  ballLifeTimeAfterCollision: 2

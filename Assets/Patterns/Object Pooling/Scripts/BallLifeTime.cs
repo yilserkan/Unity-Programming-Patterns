@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProgrammingPatterns
+namespace ProgrammingPatterns.Patterns.Object_Pooling.Scripts
 {
     [CreateAssetMenu(fileName = "New Ball Life Time", menuName = "ScriptableObjects/Ball")]
     public class BallLifeTime : ScriptableObject

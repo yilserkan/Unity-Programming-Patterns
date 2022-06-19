@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace ProgrammingPatterns
+namespace ProgrammingPatterns.Patterns.Object_Pooling.Scripts
 {
     public class Ball : MonoBehaviour
     {

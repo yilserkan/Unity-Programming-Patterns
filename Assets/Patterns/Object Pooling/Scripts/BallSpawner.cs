@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 using Random = UnityEngine.Random;
 
 
-namespace ProgrammingPatterns
+namespace ProgrammingPatterns.Patterns.Object_Pooling.Scripts
 {
     public class BallSpawner : MonoBehaviour
    {
