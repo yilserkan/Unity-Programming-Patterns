@@ -2,6 +2,14 @@
 
 Before i get into design patterns there a couple of fundamental topics which are being used in various design patterns.  
 
+## SOLID Principles
+
+### Single Resposnibility
+Every class or module should be responsible for a single functionality.
+
+### Open Closed
+Every class should be open for extensions but closed to modificiations.
+
 ## Interface
 An Interface is kind of a contract. It has set of methods, properties and other members that a target class must implement.
 
