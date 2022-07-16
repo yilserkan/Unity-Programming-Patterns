@@ -10,6 +10,15 @@ Every class or module should be responsible for a single functionality.
 ### Open Closed
 Every class should be open for extensions but closed to modificiations.
 
+### Liskov Substitution
+A class which inherits from another class should be able to be used as if it were the base class.
+
+### Interface Segration
+A class should not depend on interfaces that they don't use. The interfaces should be seperated in a logical way.
+
+### Dependency Inversion
+Reduces dependency of high level classes on low level classes by using interfaces.
+
 ## Interface
 An Interface is kind of a contract. It has set of methods, properties and other members that a target class must implement.
 
